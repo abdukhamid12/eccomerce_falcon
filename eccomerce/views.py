@@ -25,3 +25,11 @@ def order_list(request):
 def order_details(request):
     context = {}
     return render(request, 'store/e-commerce/orders/order-details.html', context)
+
+def customers(request):
+    context = {}
+    return render(request, 'store/e-commerce/customers.html', context)
+
+def customers_details(request):
+    context = {}
+    return render(request, 'store/e-commerce/customer-details.html', context)
