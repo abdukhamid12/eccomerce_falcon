@@ -33,3 +33,7 @@ def customers(request):
 def customers_details(request):
     context = {}
     return render(request, 'store/e-commerce/customer-details.html', context)
+
+def shopping_cart(request):
+    context = {}
+    return render(request, 'store/e-commerce/shopping-cart.html', context)
