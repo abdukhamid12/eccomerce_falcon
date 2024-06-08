@@ -17,3 +17,11 @@ def product_list(request):
 def product_details(request):
     context = {}
     return render(request, 'store/e-commerce/product/product-details.html', context)
+
+def order_list(request):
+    context = {}
+    return render(request, 'store/e-commerce/orders/order-list.html', context)
+
+def order_details(request):
+    context = {}
+    return render(request, 'store/e-commerce/orders/order-details.html', context)

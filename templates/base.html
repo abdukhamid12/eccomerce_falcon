@@ -11,6 +11,7 @@
         <!-- ===============================================-->
         <title>Falcon | Dashboard &amp; Web App Template</title>
 
+
         <!-- ===============================================-->
         <!--    Favicons-->
         <!-- ===============================================-->
@@ -35,7 +36,6 @@
         <link href="{% static 'eccomerce/assets/css/theme.min.css' %}" rel="stylesheet" id="style-default" />
         <link href="{% static 'eccomerce/assets/css/user-rtl.min.css' %}" rel="stylesheet" id="user-style-rtl" />
         <link href="{% static 'eccomerce/assets/css/user.min.css' %}" rel="stylesheet" id="user-style-default" />
-
 
         <script>
             var isRTL = JSON.parse(localStorage.getItem("isRTL"));
@@ -246,13 +246,13 @@
                                             <!-- more inner pages-->
                                             <ul class="nav collapse false" id="orders">
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="app/e-commerce/orders/order-list.html" aria-expanded="false">
+                                                    <a class="nav-link" href="{% url 'store:order_list' %}" aria-expanded="false">
                                                         <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Order list</span></div>
                                                     </a>
                                                     <!-- more inner pages-->
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="app/e-commerce/orders/order-details.html" aria-expanded="false">
+                                                    <a class="nav-link" href="{% url 'store:order_details' %}" aria-expanded="false">
                                                         <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Order details</span></div>
                                                     </a>
                                                     <!-- more inner pages-->
@@ -1787,8 +1787,10 @@
                             </li>
                         </ul>
                     </nav>
+
                     {% block content %}
                     {% endblock %}
+
                     <footer class="footer">
                         <div class="row g-0 justify-content-between fs--1 mt-4 mb-3">
                             <div class="col-12 col-sm-auto text-center">
