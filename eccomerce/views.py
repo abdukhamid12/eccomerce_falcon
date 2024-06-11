@@ -37,3 +37,15 @@ def customers_details(request):
 def shopping_cart(request):
     context = {}
     return render(request, 'store/e-commerce/shopping-cart.html', context)
+
+def checkout(request):
+    context = {}
+    return render(request, 'store/e-commerce/checkout.html', context)
+
+def billing(request):
+    context = {}
+    return render(request, 'store/e-commerce/billing.html', context)
+
+def invoice(request):
+    context = {}
+    return render(request, 'store/e-commerce/invoice.html', context)
