@@ -1,21 +1,25 @@
 from django.shortcuts import render
 
+from eccomerce.models import *
 
 
 # Create your views here.
 def store(request):
-    context = {}
     # return render(request, 'store/e-commerce/product/product-list.html', context)
     # return render(request, 'store/e-commerce/product/product-details.html', context)
+    products = Product.objects.all()
+    context = {'products': products}
     return render(request, 'store/e-commerce/product/product-grid.html', context)
     # return render(request, 'base.html', context)
 
 def product_list(request):
-    context = {}
+    products = Product.objects.all()
+    context = {'products': products}
     return render(request, 'store/e-commerce/product/product-list.html', context)
 
 def product_details(request):
-    context = {}
+    products = Product.objects.all()
+    context = {'products': products}
     return render(request, 'store/e-commerce/product/product-details.html', context)
 
 def order_list(request):
