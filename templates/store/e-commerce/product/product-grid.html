@@ -46,30 +46,32 @@
                              style="height: 178px; transform: translate3d(-1112px, 0px, 0px); transition-duration: 0ms;">
                             <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
                                  data-swiper-slide-index="0" role="group" aria-label="1 / 3"
-                                 style="width: 273px; margin-right: 5px;"><a class="d-block"
-                                                                             href="{% url 'store:product_details' %}"><img
-                                    class="rounded-top img-fluid" src="{{ product.image.url}}"
-                                    alt=""></a></div>
+                                 style="width: 273px; margin-right: 5px;">
+                                <a class="d-block" href="{% url 'store:product_details' product.id %}"><img
+                                    class="rounded-top img-fluid" src="{{ product.image.url }}"
+                                    alt="">
+                                </a>
+                            </div>
                             <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
                                  data-swiper-slide-index="1" role="group" aria-label="2 / 3"
                                  style="width: 273px; margin-right: 5px;"><a class="d-block"
-                                                                             href="{% url 'store:product_details' %}"><img
+                                                                             href="{% url 'store:product_details' product.id%}"><img
                                     class="rounded-top img-fluid" src="{{ product.image.url}}"
                                     alt=""></a></div>
                             <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
                                  data-swiper-slide-index="2" role="group" aria-label="3 / 3"
                                  style="width: 273px; margin-right: 5px;"><a class="d-block"
-                                                                             href="{% url 'store:product_details' %}"><img
+                                                                             href="{% url 'store:product_details' product.id%}"><img
                                     class="rounded-top img-fluid" src="{{ product.image.url }}"
                                     alt=""></a></div>
                             <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="0" role="group"
                                  aria-label="1 / 3" style="width: 273px; margin-right: 5px;"><a class="d-block"
-                                                                                                href="{% url 'store:product_details' %}"><img
+                                                                                                href="{% url 'store:product_details' product.id %}"><img
                                     class="rounded-top img-fluid" src="{{ product.image.url }}"
                                     alt=""></a></div>
                             <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="1" role="group"
                                  aria-label="2 / 3" style="width: 273px; margin-right: 5px;"><a class="d-block"
-                                                                                                href="{% url 'store:product_details' %}"><img
+                                                                                                href="{% url 'store:product_details' product.id %}"><img
                                     class="rounded-top img-fluid" src="{{ product.image.url }}"
                                     alt=""></a></div>
                         </div>
@@ -84,7 +86,7 @@
                     <span class="badge rounded-pill bg-success position-absolute mt-2 me-2 z-index-2 top-0 end-0">New</span>
                 </div>
                 <div class="p-3">
-                    <h5 class="fs-0"><a class="text-dark" href="{% url 'store:product_details' %}">{{product.name}}</a>
+                    <h5 class="fs-0"><a class="text-dark" href="{% url 'store:product_details' product.id%}">{{product.name}}</a>
                     </h5>
                     <p class="fs--1 mb-3"><a class="text-500" href="#!">{{product.category}}</a></p>
                     <h5 class="fs-md-2 text-warning mb-0 d-flex align-items-center mb-3"> ${{product.price}}
